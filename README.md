@@ -34,7 +34,7 @@ Video Demo for the application:
 
 ## Table of Contents
 
-- [Homework---10---OOP-Engineering-Team](#homework---10---oop-engineering-team)
+- [Homework-11---Express-Note-Taker](#homework-11---express-note-taker)
   - [Description](#description)
   - [Team Creator Demo](#team-creator-demo)
     - [Team Sample Demo](#team-sample-demo)
@@ -59,6 +59,9 @@ To install dependencies, run the following in your terminal:
 ```
 npm i 
 ```
+```
+npm i uuid
+```
 
 ## Tests
 
@@ -77,7 +80,7 @@ npm run test
 After installations are completed, run the app with: 
 
 ```
-node team.js
+node server.js
 ```
 
 <p align = "center">
