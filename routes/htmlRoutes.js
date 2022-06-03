@@ -2,13 +2,13 @@
 const path = require('path');
 
 //Route Notes.js to html files
-module.exports = (notes) => {
+module.exports = (app) => {
     
-    notes.get("/notes", (req, res) => {
+    app.get("/notes", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/notes.html"));
     });
 
-    notes.get("*", (req, res) => {
+    app.get("*", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 }
