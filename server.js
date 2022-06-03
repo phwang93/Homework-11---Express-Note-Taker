@@ -14,8 +14,8 @@ app.use(express.json());
 app.use(express.static('public'))
 
 // Routes for the notes app
-require("./routes/apiRoutes")(notes);
-require("./routes/htmlRoutes")(notes);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 // PORT listener for the notes app
 app.listen(PORT, function () {
