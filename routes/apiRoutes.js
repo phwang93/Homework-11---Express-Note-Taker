@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = (notes) => {
 
-    // read in and display notes
+    // Read and Desplay note GET
     notes.get("/api/notes", (req, res) => {
         fs.readFile('./db/db.json', (err, data) => {
             if (err) throw err;
@@ -12,7 +12,7 @@ module.exports = (notes) => {
         });
     });
 
-    // create new note
+    // Creating a new note POST
     notes.post("/api/notes", (req, res) => {
         let newNote = req.body;
         newNote.id = uuidv4();
@@ -27,7 +27,7 @@ module.exports = (notes) => {
         });
     });
 
-    // delete note
+    // Deleting the note DELETE
     notes.delete("/api/notes/:id", (req, res) => {
         const id = req.params.id;
         fs.readFile('./db/db.json', (err, data) => {
