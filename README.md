@@ -56,10 +56,6 @@ After installations are completed, run the app with:
 ```
 node server.js
 ```
-
-Heroku Deployed:
-    - https://philips-note-taker.herokuapp.com/
-
 ## License
 
 * Copyright 2022 Philip Hwang
@@ -71,3 +67,4 @@ If you have any questions, please contact me at:
 * Email: [pshwang93@gmail.com](mailto:pshwang93@gmail.com). 
 * GitHub: [phwang93](https://github.com/phwang93).
 * Repo: [Homework-11---Express-Note-Taker](https://github.com/phwang93/Homework-11---Express-Note-Taker).
+* Heroku: [Note Taker App](https://philips-note-taker.herokuapp.com).
