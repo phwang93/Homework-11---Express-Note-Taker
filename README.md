@@ -1,18 +1,20 @@
 # Homework-11---Express-Note-Taker
-Create a Team Building CLI APP using Node.js. 
+Create an application called Note Taker that can be used to write and save notes,using Express. 
+
+<p align = "center">
+<img alt="preview" src="./imgs/screenshot.png">
+</p>
 
 ## Description
- Create a command-line application that will do the following:
-
-- Using "Inquirer package": https://www.npmjs.com/package/inquirer
-- Invoke the application using "node team.js"
-- Use Jest to run tests for the app
-- Prompt User questions to create a Engineering Team
-- Generate a html file that includes all the team members
-- Include Demo Walkthrough Video of the APP (.gif or a video): Screencastify, or convert .MOV to .GIF
-- Screenshot of a sample of team.html file generated
-- Screenshot of all test passed
-## Team Creator Demo 
+ This application allows a user to write, save, delete, and view previously saved notes. It uses an Express backend to save and retrive note data from a JSON file. The app can be used in the terminal, or using Heroku. The following are the routes used:
+### HTML Routes
+* GET /notes - Returns the notes.html file.
+* GET * - Returns the index.html file
+### API Routes
+* GET /api/notes - Reads the db.json file and returns all saved notes as JSON.
+* POST /api/notes - Receives a new note to save on the request body, adds it to the db.json file, and then returns the new note to the client.
+* DELETE /api/notes/:id - Receives a query parameter containing the id of a note to delete, removes the note with the given id property, and then rewrites the notes to the db.json file.
+## Note Taker Demo 
 
 Video Demo for the application:
 
@@ -20,28 +22,16 @@ Video Demo for the application:
 <img alt="App Demo" src="./imgs/demo1.gif">
 </p>
 
-<p align = "center">
-<img alt="App2 Demo" src="./imgs/demo2.gif">
-</p>
-
-### Team Sample Demo
-
-<p align = "center">
-<img alt="screenshot" src="./imgs/SampleTeam.png">
-</p>
-
-
-
 ## Table of Contents
 
 - [Homework-11---Express-Note-Taker](#homework-11---express-note-taker)
   - [Description](#description)
-  - [Team Creator Demo](#team-creator-demo)
-    - [Team Sample Demo](#team-sample-demo)
+    - [HTML Routes](#html-routes)
+    - [API Routes](#api-routes)
+  - [Note Taker Demo](#note-taker-demo)
   - [Table of Contents](#table-of-contents)
   - [Resources](#resources)
   - [Installation](#installation)
-  - [Tests](#tests)
   - [Usage](#usage)
   - [License](#license)
   - [Questions](#questions)
@@ -49,8 +39,8 @@ Video Demo for the application:
 ## Resources
 
 * [Node.js](https://nodejs.org/)
-* [Inquirer.js](https://www.npmjs.com/package/inquirer)
-* [Jest](https://www.npmjs.com/package/jest)
+* [Express](https://expressjs.com/)
+* [Heroku](https://heroku.com)
 
 ## Installation
 
@@ -59,22 +49,6 @@ To install dependencies, run the following in your terminal:
 ```
 npm i 
 ```
-```
-npm i uuid
-```
-
-## Tests
-
-To run tests, run the following:
-
-```
-npm run test
-```
-
-<p align = "center">
-<img alt="screenshot" src="./imgs/SampleTest.png">
-</p>
-
 ## Usage
 
 After installations are completed, run the app with: 
@@ -83,17 +57,17 @@ After installations are completed, run the app with:
 node server.js
 ```
 
-<p align = "center">
-<img alt="Prompt" src="./imgs/Prompt.png">
-</p>
+Heroku Deployed:
+    - https://philips-note-taker.herokuapp.com/
 
 ## License
 
-This repository is licensed under the [MIT license](./LICENSE).
+* Copyright 2022 Philip Hwang
+* This repository is licensed under the [MIT license](./LICENSE).
 
 ## Questions
 
 If you have any questions, please contact me at: 
 * Email: [pshwang93@gmail.com](mailto:pshwang93@gmail.com). 
 * GitHub: [phwang93](https://github.com/phwang93).
-* Repo: [Homework10-OOP-Engineering-Team](https://github.com/phwang93/Homework---10---OOP-Engineering-Team).
+* Repo: [Homework-11---Express-Note-Taker](https://github.com/phwang93/Homework-11---Express-Note-Taker).
